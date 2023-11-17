@@ -1,32 +1,14 @@
-//
-//  My_MoneyApp.swift
-//  My Money
-//
-//  Created by William on 11/14/23.
-//
-
 import SwiftUI
-import SwiftData
+
 
 @main
 struct My_MoneyApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    var monthlyBills = MonthlyBill.sampleData
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(monthlyBills: monthlyBills)
         }
-        .modelContainer(sharedModelContainer)
     }
 }
+ 
