@@ -5,7 +5,7 @@ struct HomeView: View {
     let bills: [MonthlyBill]
     
     var body: some View {
-        VStack{
+        VStack {
             HomeHeaderView()
             NavigationStack {
                 List(bills) { bill in
@@ -19,8 +19,8 @@ struct HomeView: View {
                         Image(systemName: "plus")
                     }
                 }
+                HomeFooterView()
             }
-            HomeFooterView()
         }
     }
 }
