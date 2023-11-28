@@ -11,6 +11,7 @@
 		3D5C08E82B06FD7200AA10A9 /* MonthlyBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C08E72B06FD7200AA10A9 /* MonthlyBill.swift */; };
 		3D5C08EA2B06FE5700AA10A9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C08E92B06FE5700AA10A9 /* Theme.swift */; };
 		3D5C08EC2B07007100AA10A9 /* BillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C08EB2B07007100AA10A9 /* BillDetailView.swift */; };
+		3DA19A122B158A350087ADD4 /* HomeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA19A112B158A350087ADD4 /* HomeFooterView.swift */; };
 		3DD21D222B0461BF00AD80BA /* My_MoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD21D212B0461BF00AD80BA /* My_MoneyApp.swift */; };
 		3DD21D282B0461C700AD80BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD21D272B0461C700AD80BA /* Assets.xcassets */; };
 		3DD21D2C2B0461C700AD80BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD21D2B2B0461C700AD80BA /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		3D5C08E72B06FD7200AA10A9 /* MonthlyBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBill.swift; sourceTree = "<group>"; };
 		3D5C08E92B06FE5700AA10A9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3D5C08EB2B07007100AA10A9 /* BillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailView.swift; sourceTree = "<group>"; };
+		3DA19A112B158A350087ADD4 /* HomeFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterView.swift; sourceTree = "<group>"; };
 		3DD21D1E2B0461BF00AD80BA /* My Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD21D212B0461BF00AD80BA /* My_MoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_MoneyApp.swift; sourceTree = "<group>"; };
 		3DD21D272B0461C700AD80BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				3D5C08E32B06F8C500AA10A9 /* HomeHeaderView.swift */,
+				3DA19A112B158A350087ADD4 /* HomeFooterView.swift */,
 				3DD21D322B0464DF00AD80BA /* HomeView.swift */,
 				3D5C08EB2B07007100AA10A9 /* BillDetailView.swift */,
 			);
@@ -173,6 +176,7 @@
 				3D5C08E82B06FD7200AA10A9 /* MonthlyBill.swift in Sources */,
 				3D5C08EC2B07007100AA10A9 /* BillDetailView.swift in Sources */,
 				3DD21D332B0464DF00AD80BA /* HomeView.swift in Sources */,
+				3DA19A122B158A350087ADD4 /* HomeFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
