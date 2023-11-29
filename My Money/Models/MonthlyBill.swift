@@ -3,7 +3,7 @@ import Foundation
 
 struct MonthlyBill: Identifiable {
     let id: UUID
-    let title: String
+    var title: String
     var amount: Double
     var due: String
     var paid: Bool
@@ -16,6 +16,12 @@ struct MonthlyBill: Identifiable {
         self.due = due
         self.paid = paid
         self.theme = theme
+    }
+}
+
+extension MonthlyBill {
+    static var emptyBill: MonthlyBill {
+        MonthlyBill(title: "", amount: 0.0, due: "", paid: false, theme: .sky)
     }
 }
 
