@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct HomeView: View {
-    let bills: [MonthlyBill]
+    @Binding var bills: [MonthlyBill]
     
     func getCurrentMonth() -> String {
         let date = Date()
@@ -16,8 +16,8 @@ struct HomeView: View {
             Text(getCurrentMonth())
                 .font(.system(size: 36))
             NavigationStack {
-                List(bills) { bill in
-                    NavigationLink(destination: BillDetailView(bill: bill)) {
+                List($bills) { $bill in
+                    NavigationLink(destination: BillDetailView(bill: $bill)) {
                         VStack {
                             Text(bill.title)
                             Text(String(format: "%.2f", bill.amount))
@@ -33,14 +33,14 @@ struct HomeView: View {
                     }
                 }
             }
-            HomeFooterView()
+            HomeFooterView(bills: $bills)
         }
     }
 }
 
 struct HomeViewPreviews: PreviewProvider {
     static var previews: some View {
-        HomeView(bills: MonthlyBill.sampleData)
+        HomeView(bills: .constant(MonthlyBill.sampleData))
     }
 }
 

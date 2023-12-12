@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct BillEditView: View {
-    @State private var bill = MonthlyBill.emptyBill
+    @Binding var bill: MonthlyBill
     
     var body: some View {
         Form {
@@ -18,6 +18,6 @@ struct BillEditView: View {
 
 struct BillEditViewPreviews: PreviewProvider {
     static var previews: some View {
-        BillEditView()
+        BillEditView(bill: .constant(MonthlyBill.sampleData[0]))
     }
 }

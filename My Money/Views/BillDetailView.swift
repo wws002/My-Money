@@ -2,7 +2,9 @@ import SwiftUI
 
 
 struct BillDetailView: View {
-    let bill: MonthlyBill
+    @Binding var bill: MonthlyBill
+    
+    @State private var editingBill = MonthlyBill.emptyBill
     @State private var isPresentingEditView = false
     
     var body: some View {
@@ -33,11 +35,12 @@ struct BillDetailView: View {
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
+                editingBill = bill
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationStack {
-                BillEditView()
+                BillEditView(bill: $editingBill)
                     .navigationTitle(bill.title)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
@@ -48,6 +51,7 @@ struct BillDetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Confirm") {
                                 isPresentingEditView = false
+                                bill = editingBill
                             }
                         }
                     }
@@ -59,7 +63,7 @@ struct BillDetailView: View {
 struct BillDetailViewPreviews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            BillDetailView(bill: MonthlyBill.sampleData[0])
+            BillDetailView(bill: .constant(MonthlyBill.sampleData[0]))
         }
     }
 }

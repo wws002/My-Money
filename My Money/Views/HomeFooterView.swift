@@ -2,9 +2,11 @@ import SwiftUI
 
 
 struct HomeFooterView: View {
+    @Binding var bills: [MonthlyBill]
+    
     func calculateTotalBills() -> Double {
         var total: Double = 0.0
-        for bill in MonthlyBill.sampleData {
+        for bill in bills {
             total = total + bill.amount
         }
         return total
@@ -16,7 +18,7 @@ struct HomeFooterView: View {
     
     func calculatePaidBills() -> Double {
         var paid: Double = 0.0
-        for bill in MonthlyBill.sampleData {
+        for bill in bills {
             if bill.paid {
                 paid = paid + bill.amount
             }
